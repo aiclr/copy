@@ -10,7 +10,12 @@ copy with process bar
 >
 > build `cmake --build build` \
 > install  `cmake --install build --prefix "/usr"`
-> > `/usr/bin`、`/usr/lib`、`/usr/include`
+> > `/usr/bin/copy` \
+> > `/usr/lib/libProgress.so` \
+> > `/usr/local/lib/libFile.so` \
+> > `/usr/local/include/file.h` \
+> > `/usr/local/include/progress.h` \
+> > `/usr/local/include/progress.h`
 >
 > cpack `cmake --build build --target cpack`
 

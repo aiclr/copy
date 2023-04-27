@@ -5,10 +5,10 @@ add_library(Progress SHARED progress.c)
 set_target_properties(Progress PROPERTIES PUBLIC_HEADER progress.h)
 
 
-# shared libraries
+# shared lib search /lib /usr/lib
 install(TARGETS Progress
-        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} # shared lib search /lib /usr/lib
-        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} # --prefix "/usr" /usr/lib
+        PUBLIC_HEADER DESTINATION local/${CMAKE_INSTALL_INCLUDEDIR}) # --prefix "/usr" /usr/local/include
 
 # Make sure the compiler can find include files for our PROGRESS library
 # when other libraries or executables link to Hello
