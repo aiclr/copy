@@ -8,8 +8,8 @@ set_target_properties(File PROPERTIES PUBLIC_HEADER file.h)
 # static libraries search /lib /usr/lib /usr/local/lib
 # include(GNUInstallDirs)
 install(TARGETS File
-        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+        ARCHIVE DESTINATION local/${CMAKE_INSTALL_LIBDIR} # --prefix "/usr" /usr/local/lib
+        PUBLIC_HEADER DESTINATION local/${CMAKE_INSTALL_INCLUDEDIR}) # --prefix "/usr" /usr/local/include
 
 
 # Make sure the compiler can find include files for our file static library

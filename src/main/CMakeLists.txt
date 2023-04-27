@@ -14,4 +14,4 @@ target_link_libraries(copy LINK_PUBLIC File Progress)
 
 # executables
 install(TARGETS copy
-        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+        RUNTIME DESTINATION local/${CMAKE_INSTALL_BINDIR}) # --prefix "/usr" /usr/local/bin
